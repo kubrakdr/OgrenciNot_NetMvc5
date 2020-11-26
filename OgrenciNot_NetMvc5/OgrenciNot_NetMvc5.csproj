@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\HesapTestController.cs" />
     <Compile Include="Controllers\KuluplerController.cs" />
     <Compile Include="Controllers\NotlarController.cs" />
     <Compile Include="Controllers\OgrenciListesiController.cs" />
@@ -581,6 +582,9 @@
     <Content Include="Views\Notlar\Index.cshtml" />
     <Content Include="Views\Default\YeniDers.cshtml" />
     <Content Include="Views\Kulupler\YeniKulup.cshtml" />
+    <Content Include="Views\OgrenciListesi\YeniOgrenci.cshtml" />
+    <Content Include="Views\Notlar\YeniSinav.cshtml" />
+    <Content Include="Views\HesapTest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

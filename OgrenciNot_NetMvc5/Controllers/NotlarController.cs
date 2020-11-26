@@ -18,5 +18,20 @@ namespace OgrenciNot_NetMvc5.Controllers
 
             return View(notlar);
         }
+        [HttpGet]
+        public ActionResult YeniSinav()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniSinav(TBL_NOTLAR tbn)
+        {
+            db.TBL_NOTLAR.Add(tbn);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
     }
 }
