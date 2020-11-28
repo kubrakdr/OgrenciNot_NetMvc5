@@ -31,6 +31,31 @@ namespace OgrenciNot_NetMvc5.Controllers
             return View();
         }
 
+        public ActionResult Sil(int id)
+        {
+            var ders = db.TBL_DERSLER.Find(id);
+            db.TBL_DERSLER.Remove(ders);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
+
+        public ActionResult DersGetir(int id)
+        {
+            var ders = db.TBL_DERSLER.Find(id);
+            return View("DersGetir",ders);
+        }
+        public ActionResult Guncelle(TBL_DERSLER p)
+        {
+            var drs = db.TBL_DERSLER.Find(p.DERSID);
+            drs.DERSAD = p.DERSAD;
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Default");
+
+
+        }
 
     }
 }

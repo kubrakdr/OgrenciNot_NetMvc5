@@ -16,6 +16,7 @@
         <th>PROJE</th>
         <th>ORTALAMA</th>
         <th>DURUM</th>
+        <th>GÜNCELLE</th>
     </tr>
     @foreach (var not in Model)
     {
@@ -28,6 +29,7 @@
             <td>@not.PROJE</td>
             <td>@not.ORTALAMA</td>
             <td>@not.DURUM</td>
+             <td> <a href="/Notlar/NotGetir/@not.NOTID" class="btn btn-success">Güncelle</a></td>
         </tr>
     }
 </table>

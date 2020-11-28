@@ -585,6 +585,11 @@
     <Content Include="Views\OgrenciListesi\YeniOgrenci.cshtml" />
     <Content Include="Views\Notlar\YeniSinav.cshtml" />
     <Content Include="Views\HesapTest\Index.cshtml" />
+    <Content Include="Views\Kulupler\KulupGetir.cshtml" />
+    <Content Include="Views\Default\DersGetir.cshtml" />
+    <Content Include="Views\OgrenciListesi\OgrenciGetir.cshtml" />
+    <Content Include="Views\Notlar\NotGetir.cshtml" />
+    <Content Include="Views\Kulupler\Guncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

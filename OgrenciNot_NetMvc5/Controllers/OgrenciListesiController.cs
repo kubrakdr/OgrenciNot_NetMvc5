@@ -41,6 +41,38 @@ namespace OgrenciNot_NetMvc5.Controllers
             var ogrenciler = db.TBL_OGRENCILER.ToList();
             return View(ogrenciler);
         }
+
+        public ActionResult Sil(int id)
+        {
+            var ogr = db.TBL_OGRENCILER.Find(id);
+            db.TBL_OGRENCILER.Remove(ogr);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult OgrenciGetir(int id)
+        {
+            var ogr = db.TBL_OGRENCILER.Find(id);
+
+            return View("OgrenciGetir",ogr);
+        }
+        public ActionResult Guncelle(TBL_OGRENCILER p)
+        {
+            var ogr = db.TBL_OGRENCILER.Find(p.OGRENCIID);
+            ogr.OGRAD = p.OGRAD;
+            ogr.OGRSOYAD = p.OGRSOYAD;
+            ogr.OGRFOTOGRAF = p.OGRFOTOGRAF;
+            ogr.OGRCINSIYET = p.OGRCINSIYET;
+            ogr.OGRKULUP = p.OGRKULUP;
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "OgrenciListesi");
+
+
+        }
+
+
     }
 }
 

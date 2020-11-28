@@ -34,5 +34,32 @@ namespace OgrenciNot_NetMvc5.Controllers
 
             return View(kulupler);
         }
+
+        public ActionResult Sil(int id)
+        {
+            var kulup = db.TBL_KULUPLER.Find(id);
+            db.TBL_KULUPLER.Remove(kulup);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+        public ActionResult KulupGetir(int id)
+        {
+            var kulup = db.TBL_KULUPLER.Find(id);
+
+            return View("KulupGetir",kulup);
+
+        }
+        public ActionResult Guncelle(TBL_KULUPLER p)
+        {
+            var klp = db.TBL_KULUPLER.Find(p.KULUPID);
+            klp.KULUPAD = p.KULUPAD;
+            db.SaveChanges();
+
+
+            return RedirectToAction("Index","Kulupler") ;
+        }
+
+
     }
 }

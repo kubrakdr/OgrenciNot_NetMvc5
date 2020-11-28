@@ -12,6 +12,7 @@
         <th>Soyadı</th>
         <th>Cinsiyet</th>
         <th>Kulüp</th>
+        <th>İŞLEMLER</th>
 
 
     </tr>
@@ -23,6 +24,8 @@
             <td>@ogr.OGRSOYAD</td>
             <td>@ogr.OGRCINSIYET</td>
             <td>@ogr.OGRKULUP</td>
+            <td> <a href="/OgrenciListesi/Sil/@ogr.OGRENCIID" class="btn btn-danger">Sil</a>
+           <a href="/OgrenciListesi/OgrenciGetir/@ogr.OGRENCIID" class="btn btn-success">Güncelle</a></td>
         </tr>
 
     }

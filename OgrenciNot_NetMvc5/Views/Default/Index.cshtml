@@ -11,6 +11,7 @@
 
         <th>Ders Id</th>
         <th>Ders Adı</th>
+        <th>İŞLEMLER</th>
     </tr>
 
     <tbody>
@@ -20,6 +21,8 @@
             <tr>
                 <td>@ders.DERSID</td>
                 <td>@ders.DERSAD</td>
+                <td><a href="/Default/Sil/@ders.DERSID" class="btn btn-danger">Sil</a>
+                <a href="/Default/DersGetir/@ders.DERSID" class="btn btn-success" >Guncelle</a></td>
             </tr>
         }
 
